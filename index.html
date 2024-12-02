@@ -160,7 +160,7 @@ Before the COVID-19 pandemic, healthcare services primarily relied on traditiona
     const username = 'TanyaMotta';
     const repo = 'FY6868113';
     
-    const url = 'https://api.github.com/repos/${TanyaMotta}/${repo}/commits';
+    const url = `https://api.github.com/repos/${username}/${repo}/commits`;
     try{
       const response = await fetch(url, {
         method: 'GET',
@@ -185,7 +185,7 @@ Before the COVID-19 pandemic, healthcare services primarily relied on traditiona
     }
   }
   
-// Function to verify the last update time by refreshing it from the API
+// Function to verify the last update time by re-fetching it from the API
   async function verifyLastUpdatedTime() {
     document.getElementById('last-updated').innerText = 'Verifying...';
     await getLastUpdatedTime();
@@ -210,6 +210,7 @@ Before the COVID-19 pandemic, healthcare services primarily relied on traditiona
 </pre> 
 </p>
     </div>
+
 <p id="date&time"></p>
 
 <script>
